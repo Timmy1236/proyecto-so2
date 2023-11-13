@@ -1,7 +1,6 @@
 #!/bin/bash
-# Un script que permitira registrar a un docente en el sistema.
 
-# Limpiamos la terminal
+# Un script que permitira registrar a un docente en el sistema. Limpiamos la terminal
 clear
 
 # Pedimos los datos al operador para registrar al docente
@@ -16,14 +15,12 @@ usuario=$(whoami)
 timestamp=$(date +%s)
 
 # Primero comprobamos si esa CI existe en el archivo docentes.csv
-
 if grep -q "$CI" docentes.csv; then
     echo "El docente existe en el sistema."
 else
     echo "El docente no existe en el sistema."
     exit 1
 fi
-
 
 # Pasamos todos los datos a un archivo docentes.csv, si no existe, se creara, si existe, no se ramplazara y se agrega al final.
 echo "$usuario:$CI:$fecha_inicial:$fecha_final:$timestamp" >> inasistencias.csv
