@@ -1,7 +1,6 @@
 #!/bin/bash
-# Un script que permitira registrar a un docente en el sistema.
 
-# Limpiamos la terminal
+# Un script que permitira registrar a un docente en el sistema. Limpiamos la terminal
 clear
 
 # Pedimos los datos al operador para registrar al docente
