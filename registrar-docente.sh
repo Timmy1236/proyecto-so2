@@ -1,6 +1,7 @@
 #!/bin/bash
+# Un script que permitira registrar a un docente en el sistema.
 
-# Un script que permitira registrar a un docente en el sistema. Limpiamos la terminal
+# Limpiamos la terminal
 clear
 
 # Pedimos los datos al operador para registrar al docente
@@ -9,3 +10,9 @@ read -p "Ingrese el CI del docente: " CI
 
 # Pasamos todos los datos a un archivo docentes.csv, si no existe, se creara, si existe, no se ramplazara y se agrega al final.
 echo "$CI:$nombre:$apellido" >> docentes.csv
+
+# Limpiamos la terminal
+clear
+
+# Mostramos un mensaje de exito
+echo "El docente $nombre $apellido con CI $CI ha sido registrado exitosamente."
